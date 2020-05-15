@@ -11,7 +11,32 @@ Earlier I used plain latex for that, but somehow having a full tex document for
 each letter seemed too complicated. Since I had started to use pandoc and
 markdown files (with or without yml headers), I tought it would be a good idea
 to combine these tools and file type to get to a simpler solution. And maybe
-someone is interested, therefore I thought, I share it here on github
+someone is interested, therefore I thought, I share it here on github.
+
+With this one command is enough to go from a file like this:
+
+```
+---
+address:
+    - Erika Mustermann
+    - Musterstraße 42
+    - 12345 Musterstadt
+    - Musterland
+opening:   Hello Erika,
+closing:   Schöne Grüße
+signature: Max
+foldmarks: "true"
+date:      \today
+subject:   Wie geht's?
+---
+
+wollte mich nur mal erkundigen, wie es dir so geht. Hoffe es ist alles in
+bester Ordnung.
+```
+
+to a pdf that looks like this:
+
+![output](sample/template_letter.jpg)
 
 
 ## Prerequisites
