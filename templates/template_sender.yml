@@ -1,0 +1,15 @@
+---
+fromname: Max Mustermann
+fromaddress:
+    - Musterstrasse 1
+    - 12345 Musterstadt
+    - Musterland
+place:       Musterstadt
+fromemail:   max@mustermann.xyz
+fromphone:   +49 30 333333333
+backaddress:
+    - Max Mustermann
+    - Musterstraße 1
+    - Musterstadt
+---
+

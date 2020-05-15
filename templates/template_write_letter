@@ -1,0 +1,8 @@
+#! /bin/bash
+
+input_file=$1
+output_file=$(basename $1 .md).pdf
+
+pandoc --template=path/to/template_latex.tex -o $output_file
+path/to/template_sender.yml  $input_file
+

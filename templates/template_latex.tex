@@ -1,0 +1,54 @@
+\documentclass[
+    a4paper,
+    parskip=half,
+    firstfoot=false,
+    enlargefirstpage,
+    foldmarks=$foldmarks$]{scrlttr2}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{scraddr}
+\usepackage{paralist}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% No indentation for paragraphs
+\setlength\parindent{0pt}
+
+% Left justified closing
+\renewcommand*{\raggedsignature}{\raggedright}
+
+% Sender data
+\setkomavar{fromname}{$fromname$}
+\setkomavar{fromaddress}{$for(fromaddress)$$fromaddress$$sep$\\ $endfor$}
+\setkomavar{place}{$place$}
+\setkomavar{fromemail}{$fromemail$}
+\setkomavar{fromphone}{$fromphone$}
+\setkomavar{backaddress}{$for(backaddress)$$backaddress$$sep$\\ $endfor$}
+\setkomavar{backaddressseparator}{ - }
+\setkomavar{signature}{$signature$}
+
+\setkomavar{date}{$date$}
+
+\makeatletter
+    \setkomavar{firsthead}{%
+        \raggedleft
+        \textbf{\usekomavar{fromname}}\\
+        \rule[1ex]{\textwidth}{.4pt}
+        \usekomavar{fromaddress}\\
+        \usekomavar{fromphone}\\
+        \usekomavar{fromemail}\\
+    }
+
+\makeatother
+
+\begin{document}
+    \setkomavar{subject}{$subject$}
+    \begin{letter}{$for(address)$$address$$sep$\\$endfor$}
+        \opening{$opening$}
+        $body$
+        \closing{$closing$}
+    \end{letter}
+\end{document}
+
