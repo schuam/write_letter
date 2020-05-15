@@ -5,7 +5,7 @@ address:
     - 12345 Musterstadt
     - Musterland
 opening:   Hello Erika,
-closing:   Kind regards,
+closing:   Schöne Grüße
 signature: Max
 foldmarks: "true"
 date:      \today
