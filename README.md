@@ -28,39 +28,41 @@ I'm always a bit lazy when installing latex and I don't want to pick every
 package manually, therefore I always install texlive-full (Ubtuntu) or
 texlive-most (Arch). If you have a more minimal latex distribution, you might
 have to install some latex packages. Some of the used packages in
-_template_latex.tex_ are probably not used everytime I write a letter, but they
-are in there, because I needed some at some point.
+**template_latex.tex** are probably not used everytime I write a letter, but
+they are in there, because I needed some at some point.
 
 
 ## Usage
 
 There are three files that make up the letter writing system:
 
-- template_latex.tex: A template latex file, that is populated with sender
+- **template_latex.tex**: A template latex file, that is populated with sender
   information, recipient information, and the actual content of the letter by
   pandoc. Later it is translated into a pdf file.
-- template_sender.yml: A yml file containing the information of the sender,
+- **template_sender.yml**: A yml file containing the information of the sender,
   which for me don't change ofter (only when I move).
-- template_letter.md: A markdown file with the recipient information and the
+- **template_letter.md**: A markdown file with the recipient information and the
   contents of the letter.
 
-To translate the template_letter.md file into a nice looking pdf file, all you
-need to run is:
+To translate the **template_letter.md** file into a nice looking pdf file, all
+you need to run is:
 
 ```
 pandoc --template=template_latex.tex -o letter.pdf template_letter.md
 template_sender.yml
 ```
 
-On my machine, I have put the template_latex.tex and the template_sender.yml
-files in a template folder. When I write I latter, I copy the the
-template_letter.md file into an appropriate folder, rename it and adjust the
-content. I have a wrapper script called 'write_letter', that calls pandoc with
-the appropriate arguments and is placed in a folder that is part of may PATH.
-This way I can just use the following command to generate the pdf file:
+On my machine, I have put the **template_latex.tex** and the
+**template_sender.yml** files in a template folder. When I write I latter, I
+copy the the **template_letter.md** file into an appropriate folder, rename it
+and adjust the content. I have a wrapper script called **write_letter**, that
+calls pandoc with the appropriate arguments and is placed in a folder that is
+part of may PATH.  This way I can just use the following command to generate
+the pdf file:
 
 ```
 write_letter [NAME_OF_MARKDOWN_LETTER_FILE].md
 ```
 
-A template of the script file can be found in the file: template_write_letter.
+A template of the script file can be found in the file:
+**template_write_letter**.
