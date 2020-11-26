@@ -39,7 +39,7 @@ to a pdf that looks like this:
 ![output](sample/template_letter.jpg)
 
 
-## Prerequisites
+## Requirements
 
 I use this on a linux machine (right now Arch Linux, earlier Ubuntu). I don't
 know if this works on any other system, but I guess it should.
