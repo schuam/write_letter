@@ -78,7 +78,7 @@ template_sender.yml
 ```
 
 On my machine, I have put the **template_latex.tex** and the
-**template_sender.yml** files in a template folder. When I write I latter, I
+**template_sender.yml** files in a template folder. When I write I letter, I
 copy the the **template_letter.md** file into an appropriate folder, rename it
 and adjust the content. I have a wrapper script called **write_letter**, that
 calls pandoc with the appropriate arguments and is placed in a folder that is
@@ -91,3 +91,4 @@ write_letter [NAME_OF_MARKDOWN_LETTER_FILE].md
 
 A template of the script file can be found in the file:
 **template_write_letter**.
+
